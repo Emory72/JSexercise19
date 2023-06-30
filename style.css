@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid .nav_logo i {
+    color: #7431F8;
+    font-size: 35px;
+   
+}
+
+.container-fluid .nav_logo a {
+    text-decoration: none;
+    text-align: center;
+    color: #7431F8;
+    
+    }
+
+/* Content CSS */
+.content .container{
+    background-image: url(../image726534.jpeg);
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 10px;
+}
+
+.content .input_button, .content .accordion-body button {
+    color: white;
+    background-color: #7431F8;
+    padding:10px 35px
+}
+
+.content .accordion-body .sub_result{
+    background-color: #ceb6ff;
+
+}

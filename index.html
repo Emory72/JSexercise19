@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_exercise_lesson5</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+	<!--===============================================================================================-->
+	
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <div class="nav_logo me-3">
+                  <a href="#">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <span class=" fs-2 fw-bold">Bootstrap</span>
+                  </a>
+                </div>
+                <div class="title">
+                  <h2>Javascript JS_exercise_lesson19 </h2>
+              </div>
+                
+              
+            </div>
+          </nav>
+    </header>
+    
+    <section class="content py-5">
+    <div class="container py-lg-5 py-md-4 px-lg-5 px-md-5">
+        
+        <!-- Input block -->
+        <div class="d-flex w-50" role="search">
+          <input id="input" class="form-control me-2" type="number" placeholder="Input number" aria-label="Search">
+          <button onclick="add()" class="input_button btn-sm rounded-2" type="submit">Enter</button>
+        </div>
+        <div id="" class=" mt-4 rounded bg-light py-2">
+          <h2>
+              <i class="fa-solid fa-hand-point-right ps-3"></i>
+              <span id="outputNums"></span>
+              
+          </h2>
+        </div>
+
+
+        <!-- Collapsing  Accordion-->
+        <div class="accordion accordion-flush py-lg-5 py-md-4  " id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                1. Tổng số dương
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex1()" class="btn-sm rounded-2" type="submit">Tính tổng</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output1"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                2. Đếm số dương
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex2()" class="btn-sm rounded-2" type="submit">Đếm số </button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output2"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                3. Tìm số nhỏ nhất 
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex3()" class="btn-sm rounded-2" type="submit">Tìm số nhỏ nhất </button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output3"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                4. Tìm số dương nhỏ nhất
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex4()" class="btn-sm rounded-2" type="submit">Tìm số dương nhỏ nhất</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output4"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                5. Tìm số chẵn cuối cùng
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex5()" class="btn-sm rounded-2" type="submit">Tìm số chẵn</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output5"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                6. Đổi chỗ
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="chang_order d-flex">
+                  <input id="order1" class="form-control me-3" type="number" placeholder="Nhập vị trí số 1" aria-label="Search">
+                  <input id="order2" class="form-control me-2" type="number" placeholder="Nhập vị trí số 2 " aria-label="Search">
+                </div>
+                <button onclick="ex6()" class="btn-sm rounded-2 mt-3" type="submit">Đổi chỗ</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output6"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                7. Sắp xếp tăng dần 
+              </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex7()" class="btn-sm rounded-2" type="submit">Sắp xếp</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output7"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                8. Tìm số nguyên tố đầu tiên 
+              </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex8()" class="btn-sm rounded-2" type="submit">Tìm số nguyên tố</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output8"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                9. Đếm số nguyên
+              </button>
+            </h2>
+            <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <!-- Thêm số -->
+                <div class="d-flex w-50" role="search">
+                  <input id="inputEx9" class="form-control me-2" type="number" placeholder="Input number" aria-label="Search">
+                  <button onclick="addEx9()" class=" btn-sm rounded-2" type="submit">Enter</button>
+                </div>
+                <div id="" class=" mt-4 rounded bg-light py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="outputEx9"></span>
+                      
+                  </h2>
+                </div>
+
+
+                <!-- Đếm số nguyên -->
+                <button onclick="ex9()" class="btn-sm rounded-2 mt-4" type="submit">Đếm số nguyên</button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output9"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                10. So sánh số lượng số âm và dương
+              </button>
+            </h2>
+            <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <button onclick="ex10()" class="btn-sm rounded-2" type="submit">So sánh </button>
+                <div id="" class=" sub_result mt-4 rounded  py-2">
+                  <h2>
+                      <i class="fa-solid fa-hand-point-right ps-3"></i>
+                      <span id="output10"></span>
+                      
+                  </h2>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+       
+    </div>
+    </section>
+    
+    <!--===============================================================================================-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
